@@ -1,0 +1,12 @@
+{
+    "liveServer.settings.AdvanceCustomBrowserCmdLine": "",
+    "liveSassCompile.settings.useNewCompiler": false,
+    "liveSassCompile.settings.generateMap": false,
+    "liveSassCompile.settings.formats":[
+      {
+        "format": "expanded",
+        "extensionName": ".css",
+        "savePath": "/dist/resource/css"
+      }
+    ],
+}

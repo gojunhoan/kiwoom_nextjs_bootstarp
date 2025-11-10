@@ -1,0 +1,31 @@
+/* 기본 타이포 */
+h1 { @include heading(1); }
+h2 { @include heading(2); }
+h3 { @include heading(3); }
+// p  { @include body(); margin-bottom: map.get($space, 4); }
+
+a:hover { text-decoration: underline; }
+
+.small   { font-size: 1.4rem; }
+.mono    { font-family: $font-family-mono; }
+
+/* 간단 유틸 */
+.hidden   { display: none !important; }
+.sr-only  { @include visually-hidden; }
+.truncate { @include truncate(1); }
+.clamp-2  { @include truncate(2); }
+
+/* 구분선 */
+.hr {
+  height: 1px; background: $gray-200;
+  // margin: map.get($space, 6) 0;
+}
+
+/* 카드 베이스 */
+.card {
+  border: 1px solid $gray-200;
+  border-radius: $radius-2;
+  background: $white;
+  box-shadow: $shadow-1;
+  // padding: map.get($space, 5);
+}

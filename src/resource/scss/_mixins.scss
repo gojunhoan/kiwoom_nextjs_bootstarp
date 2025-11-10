@@ -1,0 +1,81 @@
+// 브레이크포인트 미디어쿼리
+@mixin respond($key) {
+  $val: map.get($breakpoints, $key);
+  @if $val {
+    @media (min-width: #{$val}) {
+      @content;
+    }
+  } @else {
+    @warn "Unknown breakpoint `#{$key}`";
+  }
+}
+
+// 컨테이너
+@mixin container($size: xl, $padding-x: map.get($space, 4)) {
+  width: 100%;
+  margin-inline: auto;
+  padding-inline: $padding-x;
+  max-width: map.get($container, $size);
+}
+
+// 폰트 스케일
+@mixin heading($size, $weight: 700) {
+  font-weight: $weight;
+  line-height: 1.25;
+  @if $size == 1 { font-size: 3.2rem; }
+  @else if $size == 2 { font-size: 2.4rem; }
+  @else if $size == 3 { font-size: 2.0rem; }
+  @else { font-size: 1.8rem; }
+}
+
+@mixin body($weight: 400) {
+  font-size: 1.6rem;
+  line-height: $line-height-base;
+  font-weight: $weight;
+}
+
+// 접근성
+@mixin visually-hidden {
+  position: absolute !important;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0,0,0,0);
+  white-space: nowrap; border: 0;
+}
+
+// 포커스 링
+@mixin focus-ring {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 3px rgba($blue-500, .35);
+}
+
+// 텍스트 한 줄 말줄임
+@mixin truncate($lines: 1) {
+  overflow: hidden;
+  @if $lines == 1 {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  } @else {
+    display: -webkit-box;
+    -webkit-line-clamp: $lines;
+    -webkit-box-orient: vertical;
+  }
+}
+
+// 플렉스 단축
+@mixin flex-center($gap: map.get($space, 2)) {
+  display: flex; align-items: center; justify-content: center; gap: $gap;
+}
+
+// 고정 하단 안전영역(iOS safe-area)
+@mixin safe-area-padding-bottom($base: map.get($space, 4)) {
+  padding-bottom: calc(#{$base} + env(safe-area-inset-bottom));
+}
+
+// 스크롤바 (웹킷)
+@mixin scrollbar {
+  &::-webkit-scrollbar { width: 10px; height: 10px; }
+  &::-webkit-scrollbar-thumb { background: $gray-300; border-radius: $radius-2; }
+  &::-webkit-scrollbar-track { background: $gray-100; }
+}

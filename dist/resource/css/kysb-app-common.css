@@ -1,0 +1,365 @@
+@charset "UTF-8";
+/* Box sizing */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body, h1, h2, h3, h4, p, figure, blockquote, dl, dd {
+  margin: 0;
+}
+
+/* Base */
+html {
+  font-size: 62.5%;
+}
+
+body {
+  min-height: 100dvh;
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", Arial, sans-serif;
+  font-weight: 400;
+  color: #111827;
+  background: #ffffff;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Media defaults */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* Form elements */
+input, button, textarea, select {
+  font: inherit;
+  color: inherit;
+}
+
+button, [role=button] {
+  cursor: pointer;
+}
+
+button {
+  border: 0;
+  background: none;
+}
+
+/* Lists */
+ul[role=list], ol[role=list] {
+  list-style: none;
+}
+
+ul, ol {
+  padding-left: 1.6rem;
+}
+
+/* Anchor */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Table */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Reduce animations for prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+/* 기본 타이포 */
+h1 {
+  font-weight: 700;
+  line-height: 1.25;
+  font-size: 3.2rem;
+}
+
+h2 {
+  font-weight: 700;
+  line-height: 1.25;
+  font-size: 2.4rem;
+}
+
+h3 {
+  font-weight: 700;
+  line-height: 1.25;
+  font-size: 2rem;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.small {
+  font-size: 1.4rem;
+}
+
+.mono {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+}
+
+/* 간단 유틸 */
+.hidden {
+  display: none !important;
+}
+
+.sr-only {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.clamp-2 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+/* 구분선 */
+.hr {
+  height: 1px;
+  background: #e5e7eb;
+}
+
+/* 카드 베이스 */
+.card {
+  border: 1px solid #e5e7eb;
+  border-radius: 0.8rem;
+  background: #ffffff;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07), 0 1px 1px rgba(0, 0, 0, 0.06);
+}
+
+/* 기본 타이포 */
+h1 {
+  font-weight: 700;
+  line-height: 1.25;
+  font-size: 3.2rem;
+}
+
+h2 {
+  font-weight: 700;
+  line-height: 1.25;
+  font-size: 2.4rem;
+}
+
+h3 {
+  font-weight: 700;
+  line-height: 1.25;
+  font-size: 2rem;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.small {
+  font-size: 1.4rem;
+}
+
+.mono {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+}
+
+/* 간단 유틸 */
+.hidden {
+  display: none !important;
+}
+
+.sr-only {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.clamp-2 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+/* 구분선 */
+.hr {
+  height: 1px;
+  background: #e5e7eb;
+}
+
+/* 카드 베이스 */
+.card {
+  border: 1px solid #e5e7eb;
+  border-radius: 0.8rem;
+  background: #ffffff;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07), 0 1px 1px rgba(0, 0, 0, 0.06);
+}
+
+/* 라벨/헬프/에러 */
+.form-label {
+  font-size: 1.6rem;
+  line-height: 1.5;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 0.8rem;
+}
+
+.form-help {
+  font-size: 1.4rem;
+  color: #4b5563;
+  margin-top: 0.6rem;
+}
+
+.form-error {
+  font-size: 1.4rem;
+  color: #dc2626;
+  margin-top: 0.6rem;
+}
+
+/* 인풋 베이스 */
+.input, .select, .textarea {
+  width: 100%;
+  border: 1px solid #d1d5db;
+  border-radius: 0.8rem;
+  background: #ffffff;
+  transition: border-color 150ms cubic-bezier(0.2, 0, 0.2, 1), box-shadow 150ms cubic-bezier(0.2, 0, 0.2, 1);
+  color: #111827;
+}
+
+.input, .select {
+  height: 4.4rem;
+  padding: 0 1.2rem;
+}
+
+.textarea {
+  min-height: 10.8rem;
+  padding: 1.2rem;
+  resize: vertical;
+}
+
+/* 포커스/플레이스홀더 */
+.input:focus, .select:focus, .textarea:focus {
+  border-color: #007bc7;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 3px rgba(0, 123, 199, 0.35);
+}
+
+::-moz-placeholder {
+  color: #6b7280;
+}
+
+::placeholder {
+  color: #6b7280;
+}
+
+/* 비활성 */
+.input[disabled], .select[disabled], .textarea[disabled] {
+  background: #f3f4f6;
+  color: #4b5563;
+  cursor: not-allowed;
+}
+
+/* 셀렉트 커스텀 */
+.select {
+  -moz-appearance: none;
+       appearance: none;
+  -webkit-appearance: none;
+  background-image: linear-gradient(45deg, transparent 50%, #4b5563 50%), linear-gradient(135deg, #4b5563 50%, transparent 50%);
+  background-position: calc(100% - 1.6rem) 1.6rem, calc(100% - 1.1rem) 1.6rem;
+  background-size: 0.5rem 0.5rem, 0.5rem 0.5rem;
+  background-repeat: no-repeat;
+}
+
+/* 체크박스/라디오 (접근성/키보드 포커스) */
+.check {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+.check input[type=checkbox], .check input[type=radio] {
+  width: 1.6rem;
+  height: 1.6rem;
+  margin: 0;
+  accent-color: #007bc7;
+}
+.check input:focus-visible {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 3px rgba(0, 123, 199, 0.35);
+}
+
+/* 스위치 */
+.switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  cursor: pointer;
+}
+.switch input {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 3.6rem;
+  height: 2rem;
+  border-radius: 1rem;
+  background: #d1d5db;
+  position: relative;
+  transition: background 150ms cubic-bezier(0.2, 0, 0.2, 1);
+}
+.switch input::after {
+  content: "";
+  position: absolute;
+  inset: 0.2rem auto 0.2rem 0.2rem;
+  width: 1.6rem;
+  border-radius: 50%;
+  background: #ffffff;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07), 0 1px 1px rgba(0, 0, 0, 0.06);
+  transition: transform 150ms cubic-bezier(0.2, 0, 0.2, 1);
+}
+.switch input:checked {
+  background: #007bc7;
+}
+.switch input:checked::after {
+  transform: translateX(1.6rem);
+}
+
+/* 유효성 상태 */
+.is-invalid {
+  border-color: #dc2626;
+}
+
+.is-valid {
+  border-color: #16a34a;
+}
+
+/* 프로젝트별 커스텀은 여기에 추가 */
