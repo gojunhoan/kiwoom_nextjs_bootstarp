@@ -185,22 +185,22 @@ hr {
   color: #a3a7b6;
 }
 
-.container {
+.list-container {
   width: min(100% - 2rem, 1920px);
   margin-inline: auto;
 }
 
-.page-head {
+.list-page-head {
   padding: 2rem 0;
 }
 
-.page-title {
+.list-page-title {
   margin: 0;
   font-size: 2.8rem;
   font-weight: 700;
 }
 
-.page-actions {
+.list-page-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
@@ -220,7 +220,7 @@ hr {
 .btn-guide-box li a {
   font-size: 1.5rem;
 }
-.btn-guide-box li a:hover {
+.btn-guide-box li a.active, .btn-guide-box li a:hover {
   color: #0d6efd;
   font-weight: 700;
   text-decoration: underline;
@@ -229,40 +229,40 @@ hr {
   border-left: 0.1rem solid #dee2e6;
 }
 
-.table {
+.list-table {
   width: 100%;
   border-collapse: collapse;
   font-size: 1.3rem;
   color: #111;
   border-top: 0.2rem solid #000;
 }
-.table th, .table td {
+.list-table th, .list-table td {
   padding: 0.5rem;
   border: 1px solid #e5e7eb;
   text-align: left;
   vertical-align: middle;
 }
-.table th:first-child, .table td:first-child {
+.list-table th:first-child, .list-table td:first-child {
   border-left: 0;
 }
-.table th:last-child, .table td:last-child {
+.list-table th:last-child, .list-table td:last-child {
   border-right: 0;
 }
-.table th.align-c, .table td.align-c {
+.list-table th.align-c, .list-table td.align-c {
   text-align: center;
 }
-.table th.ing, .table td.ing {
+.list-table th.ing, .list-table td.ing {
   color: #fd7e14;
 }
-.table th.ok, .table td.ok {
+.list-table th.ok, .list-table td.ok {
   color: #0d6efd;
 }
-.table th.depth-title, .table td.depth-title {
+.list-table th.depth-title, .list-table td.depth-title {
   background-color: #e9ecef;
   text-align: center;
   font-weight: 700;
 }
-.table thead th {
+.list-table thead th {
   padding: 0.6rem 0;
   font-weight: 700;
   background: #000;
@@ -270,7 +270,7 @@ hr {
   text-align: center;
   border-bottom: 0.1rem solid #000;
 }
-.table-wrap {
+.list-table-wrap {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
 }

@@ -1,18 +1,18 @@
 @use "variables" as kvar;
 @use "mixins" as kmix;
 
-.container { 
+.list-container { 
   @include kmix.container(1920px); 
 }
-.page-head { 
+.list-page-head { 
   padding: 2rem 0; 
 }
-.page-title { 
+.list-page-title { 
   margin: 0; 
   font-size: 2.8rem; 
   font-weight: 700; 
 }
-.page-actions { 
+.list-page-actions { 
   display: flex; 
   flex-wrap: wrap; 
   gap: .5rem; 
@@ -29,6 +29,7 @@
     padding: 0 1rem;
     a {
       font-size: 1.5rem;
+      &.active,
       &:hover {
         color: kvar.$ky-primary;
         font-weight: 700;
