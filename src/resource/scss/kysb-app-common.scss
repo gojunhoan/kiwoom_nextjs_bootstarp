@@ -1,8 +1,5 @@
-@import "variables";
-@import "reset";
-@import "mixins";
-@import "common";
-@import "layout";
-@import "form";
-
-/* 프로젝트별 커스텀은 여기에 추가 */
+@use 'variables';
+@use 'mixins';
+@use 'reset';
+@use 'layout';
+@use 'components';
