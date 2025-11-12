@@ -2,7 +2,7 @@
 @use "mixins" as kmix;
 
 .list-container { 
-  @include kmix.container(1920px); 
+  margin: 0 2rem;
 }
 .list-page-head { 
   padding: 2rem 0; 

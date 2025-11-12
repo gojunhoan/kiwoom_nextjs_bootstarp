@@ -1,63 +1,103 @@
 @use "variables" as kvar;
+@use 'mixins' as kmix;
 
-.list-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 1.3rem;
-  color: kvar.$ky-text;
-  border-top: .2rem solid kvar.$black;
+/* 타이틀 */
+.tit {
+  &-headline { 
+    @include kmix.ky-headline(); 
+  }                 
+  &-h2 { 
+    @include kmix.ky-title(); 
+  }                 
+  &-h3 { 
+    @include kmix.ky-sub-title(); 
+  }               
+  &-h4 { 
+    @include kmix.ky-sub-title(2.2rem); 
+  }             
+  &-h5 { 
+    @include kmix.ky-sub-title(2rem); 
+  } 
+}
 
-  th, td {
-    padding: .5rem;
-    border: 1px solid #e5e7eb;
-    text-align: left;
-    vertical-align: middle;
-    &:first-child {
-      border-left: 0;
-    }
-    &:last-child {
-      border-right: 0;
-    }
-    &.align-c {
-      text-align: center;
-    }
-    &.ing {
-      color: kvar.$ky-secondary;
-    }
-    &.ok {
-      color: kvar.$ky-primary;
-    }
-    &.depth-title {
-      background-color: kvar.$ky-gray-2;
-      text-align: center;
-      font-weight: 700;
-    }
+/* Text */
+.txt-body {
+  @include kmix.ky-body();
+  &-lg {
+    @include kmix.ky-body-lg();
   }
-
-  thead th {
-    padding: .6rem 0;
-    font-weight: 700;
-    background: kvar.$black;
-    color: kvar.$white;
-    text-align: center;
-    border-bottom: .1rem solid kvar.$black;
+  &-md {
+    @include kmix.ky-label();
   }
-
-  &-wrap {
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
+  &-sm {
+    @include kmix.ky-caption();
+  }
+  &-disc {
+    @include kmix.ky-disc();
   }
 }
-.page-tab {
-  display: inline-block;
-  padding: .4rem 3.2rem;
-  font-size: 1.6rem;
-  border-radius: 5rem;
-  background: kvar.$ky-gray-3;
-  color: kvar.$black;
-  &.active {
-    background: kvar.$ky-primary;
-    color: kvar.$white;
-    font-weight: 700;
+
+/* Text color */
+.txt-color {
+  &-default {
+    color: kvar.$black;
   }
+  &-pri {
+    color: kvar.$ky-primary;
+  }
+  &-sec {
+    color: kvar.$ky-secondary;
+  }
+  &-third {
+    color: kvar.$ky-third;
+  }
+  &-err {
+    color: kvar.$ky-error;
+  }
+}
+
+/* Table */
+.ky-table-out {
+  table {
+    border-top: .1rem solid kvar.$black;
+    border-bottom: .1rem solid kvar.$ky-gray-5;
+    table-layout: fixed;
+    th {
+      padding: .8rem;
+      border-bottom: .1rem solid .1rem solid kvar.$ky-gray-5;
+      height: 4.8rem;
+      color: kvar.$black;
+      text-align: center;
+      background-color: kvar.$ky-gray-2;
+      & + th {
+        border-left:.1rem solid kvar.$ky-gray-5;
+      }    
+    }
+    td {
+      padding: .8rem;
+      border-bottom: .1rem solid kvar.$ky-gray-5;
+      height: 4.8rem;
+      color: kvar.$black;
+      & + td {
+        border-left:.1rem solid kvar.$ky-gray-5;
+      }
+    }
+    tfoot {
+      th {
+        color: kvar.$black;
+        font-weight: 500;
+        & + td {
+          border-left:.1rem solid kvar.$ky-gray-5;
+        }
+      }
+      td {
+        background-color: kvar.$ky-gray-2;
+      }
+    }
+  }
+}
+
+/* 접근성 숨김 */
+.ky-hide {
+  @include kmix.ky-hidden;
 }
