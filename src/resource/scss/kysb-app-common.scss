@@ -1,5 +1,6 @@
-@use 'variables';
-@use 'reset';
+@use 'variables' as kvar;
+@use 'reset' as kmix;
 @use 'mixins';
 @use 'layout';
 @use 'components';
+@use 'contents';

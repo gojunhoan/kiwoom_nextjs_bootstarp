@@ -296,7 +296,7 @@ body {
   &-wrap {
     display: flex;
     justify-content: space-between;
-    width: 100%;
+    width: calc(100% + 4rem);
     min-height: calc(100vh - 15rem);
     margin: -2.4rem -2.4rem 0;
   }
@@ -347,8 +347,11 @@ body {
     }
   }
   &-content {
-    width: 100%;
-    margin: 3.2rem 0;
+    width: calc(100% - 20rem);
+    height: calc(100vh - 18.2rem);
+    overflow-y: auto;
+    scrollbar-gutter: stable;
+    margin: 3.2rem 0 0;
     padding: 0 2.4rem;
     .guide-out {
       padding: 2.4rem 0;
@@ -392,7 +395,9 @@ body {
       .pub-guide-box {
         margin-top: 1.6rem;
         > * {
-          margin-top: 1.6rem;
+          + * {
+            margin-top: 1.6rem;
+          }
         }
         & + .pub-tit-md {
           margin-top: 3.2rem;

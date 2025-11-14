@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <title>키움예스저축은행</title>
+  <link rel="stylesheet" href="/src/resource/css/kysb-app-common.css">
+</head>
+<body>  
+  <div class="ky-mo-wrap">
+    <header class="ky-mo-header">
+      <button type="button" class="btn-header-back"><span class="ky-hide">뒤로가기</span></button>
+      <h1 class="header-title">가계주택담보대출 신청</h1>
+      <nav class="nav-warp">	
+        <!-- <button type="button" class="btn-header-home"><span class="ky-hide">홈으로</span></button> -->
+        <button type="button" class="btn-header-cancel"><span>취소</span></button>
+        <!-- <button type="button" class="btn-header-menu"><span class="ky-hide">메뉴</span></button></div> -->
+      </nav>
+    </header>
+    <main class="ky-mo-container" id="main">
+      <div class="ky-mo-contents">
+        <div class="title-area">          
+          <nav class="step-wrap" aria-label="진행 단계">
+            <h2 class="step-tit">한도조회</h2>
+            <ol class="step-num">
+              <li class="selected" aria-current="step">
+                <span class="ky-hide">현재 단계: </span>1<span class="ky-hide"> / 총 4단계 중 1단계</span>
+              </li>
+              <li>
+                <span class="ky-hide">다음 단계: </span>2
+              </li>
+              <li>3</li>
+              <li>4</li>
+            </ol>
+          </nav>
+          <div class="txt-body">고객님의 정보를 알려주세요</div>
+        </div>
+        <div class="form-area">
+          <div class="form-item">
+            <div class="label">직업</div>    
+            <div class="check-group check-type--box split-2">
+              <div class="check-item">
+                <input type="radio" class="input" id="jobSelect-0" name="jobSelect">
+                <label for="jobSelect-0">직장인</label>
+              </div>
+              <div class="check-item">
+                <input type="radio" class="input" id="jobSelect-1" name="jobSelect">
+                <label for="jobSelect-1">개인사업자</label>
+              </div>
+            </div>
+          </div>    
+          <div class="form-item">
+            <div class="ipt-group">
+              <div class="label">자금사용 용도</div>
+              <button type="button" class="btn select-box"><span>선택</span></button>
+            </div>  
+          </div>       
+          <h3 class="tit-h6">주택정보</h3>    
+          <div class="form-item">
+            <div class="label">주택유형</div>    
+            <div class="check-group check-type--box split-2">
+              <div class="check-item">
+                <input type="radio" class="input" id="house-0" name="houseSelect">
+                <label for="house-0">아파트(주상복합 포함)</label>
+              </div>
+              <div class="check-item">
+                <input type="radio" class="input" id="house-1" name="houseSelect">
+                <label for="house-1">빌라(연립주택 포함)</label>
+              </div>
+            </div>
+          </div>          
+          <div class="form-item">            
+            <div class="ipt-group address">
+              <label class="label" for="iptSample1">주소</label>
+              <div class="ipt-field">
+                <input type="tel" id="iptSample1" class="ipt-text" placeholder="검색 후 자동입력" readonly />
+                <button type="button" class="btn-ipt-search"><span>검색</span></button>
+              </div>
+              <!-- <div class="hint">힌트 메시지</div> -->
+            </div>
+          </div>       
+          <div class="form-item">
+            <div class="label">담보대출 보유 여부</div>    
+            <div class="check-group check-type--box split-2">
+              <div class="check-item">
+                <input type="radio" class="input" id="rdoSelect-0" name="rdoSelect">
+                <label for="rdoSelect-0">네, 있어요</label>
+              </div>
+              <div class="check-item">
+                <input type="radio" class="input" id="rdoSelect-1" name="rdoSelect">
+                <label for="rdoSelect-1">아니오, 없어요</label>
+              </div>
+            </div>
+          </div>    
+          <div class="form-item">
+            <div class="ipt-group">
+              <div class="label">명의자</div>
+              <button type="button" class="btn select-box"><span>선택</span></button>
+            </div>  
+          </div>   
+          <div class="form-item">
+            <div class="label">거주 여부</div>    
+            <div class="check-group check-type--box split-2">
+              <div class="check-item">
+                <input type="radio" class="input" id="rdoSelect-01" name="rdoSelect1">
+                <label for="rdoSelect-01">거주하고 있어요</label>
+              </div>
+              <div class="check-item">
+                <input type="radio" class="input" id="rdoSelect-11" name="rdoSelect1">
+                <label for="rdoSelect-11">세입자가 있어요</label>
+              </div>
+            </div>
+          </div>  
+          <h3 class="tit-h6">주택정보</h3>       
+          <div class="form-item">             
+            <div class="ipt-group">
+              <label class="label" for="iptSample1">휴대폰번호</label>
+              <div class="ipt-field">
+                <input type="tel" id="iptSample1" class="ipt-text" placeholder="휴대폰번호 입력" />
+              </div>
+              <div class="hint">힌트 메시지</div>
+            </div>        
+          </div>     
+          <div class="form-item">     
+            <div class="ipt-group">
+              <label class="label" for="iptSample1">이메일</label>
+              <div class="ipt-field">
+                <input type="text" id="iptSample1" class="ipt-text" placeholder="이메일주소 입력" />
+              </div>
+              <div class="hint">힌트 메시지</div>
+            </div>
+          </div> 
+        </div>
+      </div>
+      <div class="bottom-area">
+        <div class="btn-group">
+          <button type="button" class="btn btn-pri">확인</button>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
